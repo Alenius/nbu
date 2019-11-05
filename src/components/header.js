@@ -27,6 +27,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <h2><Link to='/contact/' style={{ color: 'white' }}>Kontakt</Link></h2>
     </div>
   </header>
 )
