@@ -8,9 +8,25 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
+
+const Footer = styled.footer`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: gray;
+  text-align: center;
+  font-size: 20px;
+`
+
+const FooterPhoneNr = styled.p`
+  font-style: italic;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +40,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div style={{ backgroundColor: `silver`, height: `100vh` }}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -36,7 +52,13 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
-    </>
+      <Footer>
+        <div>
+          <p>Kontakt</p>
+          <FooterPhoneNr>Urban - 0731 23 12 12</FooterPhoneNr>
+        </div>
+      </Footer>
+    </div>
   )
 }
 
