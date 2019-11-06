@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Nilssons Bygg Umeå`,
+    title: `nilssons.bygg.umeå`,
     description: `Byggföretag i Umeå`,
     author: `Adam Alenius`,
   },
