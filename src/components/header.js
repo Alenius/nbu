@@ -3,6 +3,25 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
+const HeaderRoot = styled.header`
+  background: gray;
+  margin-bottom: 1.45rem;
+`
+
+const HeaderContainer = styled.div`
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+`
+const Logo = styled.h1`
+  margin: 0;
+  font-family: Limelight, serif;
+  padding: 1.45rem 1.0875rem;
+`
+
 const StyledLink = styled(Link)`
   text-decoration: none;
   padding: 1.45rem 1.0875rem;
@@ -17,29 +36,9 @@ const StyledLink = styled(Link)`
 `
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `gray`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1000,
-        display: `flex`,
-        flexDirection: `row`,
-        justifyContent: "space-between",
-        alignItems: "baseline",
-      }}
-    >
-      <h1
-        style={{
-          margin: 0,
-          fontFamily: `Limelight, serif`,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
+  <HeaderRoot>
+    <HeaderContainer>
+      <Logo>
         <Link
           to="/"
           style={{
@@ -49,7 +48,7 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </Logo>
       <div style={{ display: `flex`, flexDirection: `row` }}>
         <h2>
           <StyledLink to="/pictures/">Bilder</StyledLink>
@@ -58,8 +57,8 @@ const Header = ({ siteTitle }) => (
           <StyledLink to="/contact/">Kontakt</StyledLink>
         </h2>
       </div>
-    </div>
-  </header>
+    </HeaderContainer>
+  </HeaderRoot>
 )
 
 Header.propTypes = {
