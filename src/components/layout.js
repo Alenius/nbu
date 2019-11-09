@@ -23,7 +23,7 @@ const MainContainer = styled.div`
 
 const Body = styled.div`
   padding-top: 0;
-  padding: 2rem 20rem;
+  padding: 2rem;
   padding-bottom: 10rem;
 `
 
