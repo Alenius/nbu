@@ -14,6 +14,8 @@ import Header from "./header"
 import "./layout.css"
 
 const MainContainer = styled.div`
+  font-family: "Open Sans", Roboto, sans-serif;
+  font-weight: 600;
   position: relative;
   background-color: silver;
   min-height: 100vh;

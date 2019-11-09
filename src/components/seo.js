@@ -73,6 +73,10 @@ function SEO({ description, lang, meta, title }) {
         href="https://fonts.googleapis.com/css?family=Limelight&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+        rel="stylesheet"
+      ></link>
     </Helmet>
   )
 }
