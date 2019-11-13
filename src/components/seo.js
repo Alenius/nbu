@@ -70,6 +70,10 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link
+        href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+        rel="stylesheet"
+      />
+      <link
         href="https://fonts.googleapis.com/css?family=Limelight&display=swap"
         rel="stylesheet"
       />
