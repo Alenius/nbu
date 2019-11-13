@@ -15,30 +15,44 @@ import "./layout.css"
 
 const MainContainer = styled.div`
   font-family: "Open Sans", Roboto, sans-serif;
+  color: black;
+  color: #444444;
   font-weight: 600;
-  position: relative;
-  background-color: silver;
+  background-color: #fefefe;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 `
 
 const Body = styled.div`
   padding-top: 0;
-  padding: 2rem;
-  padding-bottom: 10rem;
+  flex: 1;
 `
 
 const Footer = styled.footer`
-  position: absolute;
-  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   width: 100%;
-  padding: 1rem;
-  background-color: gray;
-  text-align: center;
-  font-size: 20px;
+  padding: 1.5rem;
+  background-color: #226db1;
+  color: white;
+  font-size: 1.1rem;
+  font-style: italic;
+`
+const FooterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
-const FooterPhoneNr = styled.p`
-  font-style: italic;
+const FooterTitle = styled.div`
+  display: flex;
+  font-size: 0.9rem;
+`
+const FooterText = styled.div`
+  display: flex;
 `
 
 const Layout = ({ children }) => {
@@ -59,8 +73,15 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       </Body>
       <Footer>
-        <p>Kontakt</p>
-        <FooterPhoneNr>Urban - 0731 23 12 12</FooterPhoneNr>
+        <FooterContainer>Urban Nilsson</FooterContainer>
+        <FooterContainer>
+          <FooterTitle>Telefon:</FooterTitle>
+          <FooterText>(+46) 0731 - 123 123</FooterText>
+        </FooterContainer>
+        <FooterContainer>
+          <FooterTitle>Mail:</FooterTitle>
+          <FooterText>urban@nilssonsbyggumea.se</FooterText>
+        </FooterContainer>
       </Footer>
     </MainContainer>
   )
