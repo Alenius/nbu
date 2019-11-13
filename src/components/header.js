@@ -18,7 +18,7 @@ const HeaderContainer = styled.div`
   align-items: center;
 `
 const Logo = styled(Link)`
-  color: #226db1;
+  color: var(--nbu-blue);
   font-family: Limelight, serif;
   font-size: 2.5rem;
   text-decoration: none;
@@ -45,7 +45,7 @@ const StyledLink = styled(Link)`
   padding: 0px 1rem;
 
   :hover {
-    color: #226db1;
+    color: var(--nbu-blue);
   }
 `
 
@@ -56,13 +56,13 @@ const Header = ({ siteTitle }) => (
       <LinkContainer>
         <StyledLink
           to="/pictures/"
-          activeStyle={{ color: "#226db1", textDecoration: "underline" }}
+          activeStyle={{ color: "var(--nbu-blue)", textDecoration: "underline" }}
         >
           Bilder
         </StyledLink>
         <StyledLink
           to="/contact/"
-          activeStyle={{ color: "#226db1", textDecoration: "underline" }}
+          activeStyle={{ color: "var(--nbu-blue)", textDecoration: "underline" }}
         >
           Kontakt
         </StyledLink>

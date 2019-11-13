@@ -23,6 +23,9 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+
+  /* css-variables */
+  --nbu-blue: #226db1;
 `
 
 const Body = styled.div`
@@ -37,7 +40,7 @@ const Footer = styled.footer`
   justify-content: space-evenly;
   width: 100%;
   padding: 1.5rem;
-  background-color: #226db1;
+  background-color: var(--nbu-blue);
   color: white;
   font-size: 1.1rem;
   font-style: italic;
@@ -79,7 +82,7 @@ const Layout = ({ children }) => {
           <FooterText>(+46) 0731 - 123 123</FooterText>
         </FooterContainer>
         <FooterContainer>
-          <FooterTitle>Mail:</FooterTitle>
+          <FooterTitle>E-post:</FooterTitle>
           <FooterText>urban@nilssonsbyggumea.se</FooterText>
         </FooterContainer>
       </Footer>
