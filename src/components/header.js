@@ -4,21 +4,24 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderRoot = styled.header`
-  background: gray;
+  display: flex;
+  width: 100%;
 `
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
-  max-width: 1000px;
-  height: 80px;
+  width: 60%;
+  height: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 `
-const Logo = styled.div`
+const Logo = styled(Link)`
+  color: #226db1;
   font-family: Limelight, serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-decoration: none;
 `
 
 const LinkContainer = styled.div`
@@ -42,27 +45,27 @@ const StyledLink = styled(Link)`
   padding: 0px 1rem;
 
   :hover {
-    color: lightblue;
+    color: #226db1;
   }
 `
 
 const Header = ({ siteTitle }) => (
   <HeaderRoot>
     <HeaderContainer>
-      <Logo>
-        <Link
-          to="/"
-          style={{
-            color: `black`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </Logo>
+      <Logo to="/">{siteTitle}</Logo>
       <LinkContainer>
-        <StyledLink to="/pictures/">Bilder</StyledLink>
-        <StyledLink to="/contact/">Kontakt</StyledLink>
+        <StyledLink
+          to="/pictures/"
+          activeStyle={{ color: "#226db1", textDecoration: "underline" }}
+        >
+          Bilder
+        </StyledLink>
+        <StyledLink
+          to="/contact/"
+          activeStyle={{ color: "#226db1", textDecoration: "underline" }}
+        >
+          Kontakt
+        </StyledLink>
       </LinkContainer>
     </HeaderContainer>
   </HeaderRoot>
