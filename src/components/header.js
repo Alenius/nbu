@@ -6,16 +6,16 @@ import styled from "styled-components"
 const HeaderRoot = styled.header`
   display: flex;
   width: 100%;
+  align-items: center;
 `
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
-  width: 60%;
   height: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 `
 const Logo = styled(Link)`
   color: var(--nbu-blue);
@@ -24,21 +24,20 @@ const Logo = styled(Link)`
   text-decoration: none;
 `
 
-const LinkContainer = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
+const LogoContainer = styled.div`
+  padding-left: 5rem;
+  padding-right: 5rem;
 `
 
 const StyledLink = styled(Link)`
+  font-family: "Oswald", "Open-Sans", "sans-serif";
   margin-bottom: 0;
-  flex: 1;
   height: 100%;
   display: flex;
   align-items: center;
 
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: black;
 
   transition: 0.25s;
@@ -52,21 +51,27 @@ const StyledLink = styled(Link)`
 const Header = ({ siteTitle }) => (
   <HeaderRoot>
     <HeaderContainer>
-      <Logo to="/">{siteTitle}</Logo>
-      <LinkContainer>
-        <StyledLink
-          to="/pictures/"
-          activeStyle={{ color: "var(--nbu-blue)", textDecoration: "underline" }}
-        >
-          Bilder
-        </StyledLink>
-        <StyledLink
-          to="/contact/"
-          activeStyle={{ color: "var(--nbu-blue)", textDecoration: "underline" }}
-        >
-          Kontakt
-        </StyledLink>
-      </LinkContainer>
+      <StyledLink
+        to="/pictures/"
+        activeStyle={{
+          color: "var(--nbu-blue)",
+          textDecoration: "underline",
+        }}
+      >
+        Bilder
+      </StyledLink>
+      <LogoContainer>
+        <Logo to="/">{siteTitle}</Logo>
+      </LogoContainer>
+      <StyledLink
+        to="/contact/"
+        activeStyle={{
+          color: "var(--nbu-blue)",
+          textDecoration: "underline",
+        }}
+      >
+        Kontakt
+      </StyledLink>
     </HeaderContainer>
   </HeaderRoot>
 )
