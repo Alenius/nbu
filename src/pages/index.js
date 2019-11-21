@@ -25,7 +25,8 @@ const PageContainer = styled.div`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  min-width: 600px;
+  max-width: 60%;
 `
 const TextContainer = styled.div`
   display: flex;
@@ -54,7 +55,6 @@ const SubTitle = styled.div`
 
 const MainText = styled.div`
   font-size: 1rem;
-  padding-bottom: 2rem;
   opacity: 0;
   animation: ${fadeIn} 1s ease-in-out forwards;
   animation-delay: 0.5s;
@@ -62,7 +62,7 @@ const MainText = styled.div`
 const StyledLink = styled(Link)`
   font-size: 1.1rem;
   text-decoration: none;
-  color: #226db1;
+  color: var(--nbu-blue);
   opacity: 0;
   padding-bottom: 2rem;
   animation: ${fadeIn} 1s ease-in-out forwards;
@@ -70,7 +70,6 @@ const StyledLink = styled(Link)`
 `
 
 const StyledList = styled.ul`
-  padding: 0.5rem;
   padding-bottom: 0;
 `
 
@@ -82,7 +81,7 @@ const IndexPage = () => (
         <MainTitle>Din snickare i Umeå</MainTitle>
         <SubTitle>Efter dina behov</SubTitle>
         <MainText>
-          Vi kan hjälpa er med det mesta inom bygg, till exempel:
+          <p>Vi kan hjälpa er med det mesta inom bygg, till exempel:</p>
           <StyledList>
             <li>Nybyggnation</li>
             <li>ROT-jobb</li>
@@ -90,26 +89,40 @@ const IndexPage = () => (
             <li>Kakling</li>
             <li>Fönsterbyte</li>
           </StyledList>
-          För att få mer uppfattning om vårat arbete så kan ni gå till vårat
-          bildgalleri där vi har bilder från jobb som vi utfört. Vi fixar det
-          mesta.
+          <p>
+            Vi hjälper er även med utformning av erat projekt och kan komma med
+            förslag på olika lösningar.{" "}
+          </p>
+          <p>
+            För att få mer uppfattning om vårat arbete så kan ni gå till vårat
+            bildgalleri där vi har bilder från jobb som vi utfört. Vi fixar det
+            mesta.
+          </p>
         </MainText>
         <StyledLink
           to="/pictures/"
-          activeStyle={{ color: "#226db1", textDecoration: "underline" }}
+          activeStyle={{
+            color: "var(--nbu-blue)",
+            textDecoration: "underline",
+          }}
         >
           {"Bildgalleri \u2192"}
         </StyledLink>
         <SubTitle>Lång erfarenhet</SubTitle>
         <MainText>
-          Vi har funnits sedan 2005 och haft många nöjda kunder under dessa år.
-          Företaget består av två personer, Urban Nilsson och hans son David.
+          <p>
+            Vi har funnits sedan 2005 och haft många nöjda kunder under dessa
+            år. Företaget består av två personer, Urban Nilsson och hans son
+            David.
+          </p>
         </MainText>
         <SubTitle>Kontakt</SubTitle>
         <MainText>
-          Om du har några frågor eller vill ha en offert så kontakta urban på
-          telefonnummer 0723 123 123, eller om du föredrar att maila på
-          urban@nilssonsbyggumea.se
+          <p>
+            Om du har några frågor eller vill ha en offert så kontakta urban på
+            telefonnummer 0723 123 123, eller om du föredrar att maila på
+            urban@nilssonsbyggumea.se
+          </p>
         </MainText>
       </MainContainer>
     </PageContainer>
