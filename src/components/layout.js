@@ -16,7 +16,7 @@ import "./layout.css"
 const MainContainer = styled.div`
   font-family: "Open Sans", Roboto, sans-serif;
   color: black;
-  color: #444444;
+  color: #333333;
   font-weight: 600;
   background-color: #fefefe;
   min-height: 100vh;
@@ -26,10 +26,24 @@ const MainContainer = styled.div`
 
   /* css-variables */
   --nbu-blue: #226db1;
+  --nbu-gray: #333333;
+
+  h1 {
+    font-family: "Oswald", "Open-Sans", "sans-serif";
+  }
+
+  h2 {
+    font-family: "Oswald", "Open-Sans", "sans-serif";
+  }
+
+  img {
+    margin-bottom: 0px;
+  }
 `
 
 const Body = styled.div`
-  padding-top: 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   flex: 1;
 `
 
