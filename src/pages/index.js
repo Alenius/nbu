@@ -19,7 +19,6 @@ const fadeIn = keyframes`
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 5rem 0;
   align-items: center;
 `
 const MainContainer = styled.div`
@@ -28,6 +27,7 @@ const MainContainer = styled.div`
   min-width: 600px;
   max-width: 60%;
 `
+
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,19 +35,12 @@ const TextContainer = styled.div`
   width: 60%;
 `
 
-const MainTitle = styled.div`
-  font-family: "Oswald", "Open-Sans", "sans-serif";
-  align-self: center;
-  font-size: 2.5rem;
-  padding-bottom: 4rem;
-  animation: ${fadeIn} 1s ease-in-out;
+const MainTitle = styled.h1`
   font-style: italic;
+  animation: ${fadeIn} 1s ease-in-out;
 `
 
-const SubTitle = styled.div`
-  font-family: "Oswald", "Open-Sans", "sans-serif";
-  font-size: 1.5rem;
-  padding-bottom: 1rem;
+const SubTitle = styled.h2`
   opacity: 0;
   animation: ${fadeIn} 1s ease-in-out forwards;
   animation-delay: 0.25s;
